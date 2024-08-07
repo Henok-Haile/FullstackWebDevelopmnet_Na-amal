@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --blue: #7ab1e9;
+            --white: #cac3c3;
+        }
+
+        body {
+            background-color: var(--white);
+        }
+
+            @media screen and (max-width: 900px) {
+                body {
+                    background-color: blue;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                body {
+                    background-color: olive;
+                }
+            }
+
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li a {
+            display: block;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a.active {
+            background-color: green;
+        }
+
+        li a:hover:not(.active) {
+            background-color: gray;
+        }
+
+        div input:not(input[type=submit]
+        ) {
+            margin: 5px;
+            padding: 5px;
+            width: 70%;
+            border: 2px solid orange;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        div input:not(input[type=submit]
+        ):focus {
+            border: 2px solid lightblue;
+        }
+
+        .main {
+            margin-top: 50px;
+            padding: 30px;
+            text-align: center;
+            width: 500px;
+            background-color: lightgray;
+        }
+
+        input[type=submit] {
+            margin-top: 10px;
+            padding: 10px 30px;
+            background-color: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: rgb(251, 186, 65);
+        }
+
+        .gradient div {
+            width: 300px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        .d1 {
+            background-image: linear-gradient(red, yellow);
+        }
+
+        .d2 {
+            background-image: linear-gradient(to right, red, yellow, blue);
+        }
+
+        .d3 {
+            background-image: linear-gradient(rgba(255, 0, 0,1),rgba(255, 0 , 0, 0.1));
+        }
+
+        .h1 {
+            color: white;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
+
+        .h2 {
+            color: coral;
+            text-shadow: -1px 0 black, 0 1px black, 0 -px black;
+        }
+
+        div.card {
+            width: 250px;
+            box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2), 0px 6px 20px 0px rgba(0, 0, 0, 19);
+            text-align: center;
+        }
+
+        div.header {
+            background-color: green;
+            color: white;
+            padding: 10px;
+            font-size: 40px;
+        }
+
+        div.container {
+            padding: 10px;
+        }
+
+        /* .d1 {
+            transform: translate(50px, 100px);
+        } */
+
+        .d2 {
+            transition: width 2s;
+        }
+
+        .d2:hover {
+            width: 500px;
+        }
+
+        @keyframes example {
+            0% {background-color: red; left: 0px; top: 10px;}
+            25% {background-color: yellow; left: 200px; top: 0px;}
+            50% {background-color: blue; left: 200px; top: 200px;}
+            75% {background-color: green; left: 0px; top: 200px;}
+            100% {background-color: red; left: 0px; top: 0px;}
+        }
+
+        .d1 {
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+        }
+
+        .multi-column div {
+            column-count: 3;
+            column-gap: 40px;
+            column-rule: 1px solid lightblue;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li style="float: right;"><a class="active" href="#about">About</a></li>
+    </ul>
+
+    <div>
+        <form>
+            <div class="main">
+                <div><input type="text" placeholder="Enter User Name"></div>
+                <div><input type="password" placeholder="Enter Your Password"></div>
+                <div><input type="submit"></div>
+            </div>
+        </form>
+    </div>
+
+    <section class="gradient">
+
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+
+    </section>
+
+
+    <section class="shadow">
+
+        <h1 class="h1">text shadow effect</h1>
+        <h1 class="h2">border around text</h1>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <div class="header">
+                <h1>1</h1>
+            </div>
+    
+            <div class="container">
+                <p>January 1, 2024</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="multi-column">
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi asperiores voluptatem voluptas ut inventore in tempore voluptatum veritatis non odit, sed iusto officiis ad incidunt qui praesentium rem cumque? Repellendus?
+        Porro numquam rem alias aperiam, corporis magnam in iusto odio voluptas earum. Quibusdam facilis mollitia dolores amet cum laudantium nisi unde? Consequatur iure in voluptatem beatae vero consectetur blanditiis esse!
+        Iusto fugiat impedit ab aperiam cum. Possimus impedit necessitatibus sequi libero iste voluptates ab maxime optio facilis numquam odit expedita qui quis sunt aliquam reiciendis, totam animi et iusto inventore?
+        Ducimus beatae, deserunt impedit, repellat delectus doloremque ipsam placeat incidunt nobis repudiandae quis libero. Praesentium totam voluptatibus inventore ut itaque! Minus veniam quidem quisquam ratione sed rem sint. Quisquam, odit?
+        Assumenda, recusandae rem. Eveniet in neque nostrum rerum dolor pariatur accusamus est corporis architecto eos corrupti non officiis, quo mollitia. Facilis eos quis harum ipsa, rerum rem voluptatem ut ea.
+        Dolorum, facilis illum hic in a delectus aut repellendus perspiciatis unde quo iste corrupti ex explicabo dolore nostrum cupiditate at voluptate! Exercitationem odio officia explicabo, qui quaerat enim eaque modi?
+        Eaque nihil nam atque dicta iste quibusdam et unde quia illo veritatis ducimus ut obcaecati libero tempora blanditiis debitis, dolorem eum delectus dolore odio reprehenderit numquam adipisci. Maxime, incidunt necessitatibus.
+        Vero dignissimos, mollitia distinctio autem id ad nostrum aperiam quasi ab quam aspernatur eos dolore modi recusandae voluptatem, sequi unde magnam fuga quae, ex molestiae error. Pariatur eveniet nemo quam!
+        Debitis dicta dolore tempore ex reprehenderit, repellat blanditiis eveniet quia deserunt unde nobis! Accusamus illo incidunt ipsa quia voluptates ex porro nulla saepe magni neque! Error non vitae commodi dolore!
+        Dolorum tempora et similique tenetur architecto consequatur aliquid nisi eaque tempore minima maiores repellendus magni quibusdam fugiat, libero esse, impedit fuga ut quo officiis? Eos mollitia cupiditate velit nam maiores!
+        Quis, dolorum. Facilis cupiditate expedita culpa reprehenderit similique, magnam doloremque aliquid adipisci corrupti molestias quo, perferendis fugit fuga accusamus non dolore quam sequi inventore quae? Earum labore voluptatibus dolor odit?
+        Illum eveniet quidem temporibus consequuntur provident, perspiciatis natus? Assumenda a maxime id quod qui, debitis beatae velit iure, odio dolores officia vitae natus soluta! Animi corrupti veritatis quas odio esse?
+        Dolore consequuntur quisquam velit animi doloribus excepturi a quaerat, voluptate ipsum tenetur dolorem sint quae sunt aperiam soluta quibusdam. Voluptate perferendis eum recusandae amet officiis quas explicabo illum harum maiores.
+        Quod, placeat, sit blanditiis dolores a hic repellendus quia mollitia veniam perferendis rerum odit ducimus vitae perspiciatis distinctio quisquam minus. Accusamus magnam officia dolores aliquid aut quasi provident molestiae suscipit?
+        Maiores perspiciatis dolores et aliquid accusamus exercitationem qui? Quos esse, ipsum laboriosam, blanditiis natus exercitationem a molestiae neque temporibus deserunt repudiandae accusamus obcaecati voluptatibus rerum consectetur, delectus eius voluptas porro?
+        Maxime iusto pariatur nam sed unde voluptates inventore officia debitis blanditiis nihil. Ducimus magnam provident vero iusto, deserunt sint blanditiis, odit dignissimos nisi impedit atque delectus eos autem exercitationem. Quos.
+        Architecto dolorem odit facilis necessitatibus est voluptate magni recusandae, cumque iure quia et? Architecto tempora ut explicabo amet hic suscipit, error nulla minus quam. Exercitationem consequatur praesentium nemo laudantium error!
+        Tempore quis est fugiat saepe tempora quod, officiis alias facilis a neque ut id commodi nemo aut eligendi aspernatur reiciendis ducimus! Excepturi corrupti sed ab voluptates libero optio earum ipsum?
+        Ullam aut voluptatem cum asperiores repellendus, ducimus tenetur maiores veritatis tempora nemo velit laboriosam quaerat ipsum iste molestiae. Quam, ab? Consequatur eius reprehenderit iure tempora repudiandae similique est qui saepe?
+        Quo, neque. Assumenda, nobis odio aut eos expedita voluptate consequatur quasi ipsa nihil quibusdam quaerat iste facilis totam, aliquam, at officia eveniet illo minima provident et non dolor numquam corporis!</div>
+    </section>
+</body>
+</html>

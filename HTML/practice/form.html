@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text] {
+            width: 150px;
+            display: block;
+            margin-bottom: 10px;
+            border: 2px solid blue;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+        
+        .icon {
+            /* background-color: lightgray; */
+            background-image: url(../icon/phone.png);
+            background-size: 10%;
+            background-position: 10px 10px;
+            background-repeat: no-repeat;
+            padding: 10px 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Enter First Name">
+        <input type="text" placeholder="Enter Last Name">
+        <input class="icon" type="text">
+    </form>
+</body>
+</html>
