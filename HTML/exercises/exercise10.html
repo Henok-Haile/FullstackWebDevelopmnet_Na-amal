@@ -4,8 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 10</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .banner{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            bottom: 0;
+        }
+
+        .form-container{
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 260px;
+        }
+        
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+
+        h2 {
+            text-align: center;
+            font-weight: 800;
+        }
+        input{
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button{
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #075E5E;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #0c6d6d;
+        }
+        p{
+            text-align: center;
+            color: #007bff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+       
+       
+
+        .remember-forget{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Not Ready</h1>
+    <div class="banner">
+        <div class="form-container">
+            <img src="https://images.unsplash.com/photo-1557683316-973673baf926" alt="">
+            <h2>Account Login</h2>
+            <form>
+                <!-- <label for="user_name">Name:</label> -->
+                <input type="text" id="user_name" name="user_name" placeholder="User Name" required>
+                <!-- <label for="password">Password:</label> -->
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <button type="login">LOGIN</button>
+                <div class="remember-forget">
+                    <div>
+                        <input type="checkbox" name="remember_me">
+                    <label for="remember_me">remember me</label>
+                    </div>
+                    <p>Forget Password</p>
+                </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
