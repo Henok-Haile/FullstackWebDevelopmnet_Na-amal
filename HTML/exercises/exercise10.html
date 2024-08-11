@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercise 10</title>
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
         }
 
-        .banner{
+        .banner {
             height: 100vh;
             display: flex;
             justify-content: center;
@@ -23,16 +24,18 @@
             z-index: -1;
             right: 0;
             bottom: 0;
+            height: 100vh;
+            width: 100vw;
         }
 
-        .form-container{
+        .form-container {
             background-color: rgba(255, 255, 255, 0.8);
             padding: 20px;
             border-radius: 10px;
             width: 260px;
         }
-        
-        form{
+
+        form {
             display: flex;
             flex-direction: column;
         }
@@ -41,13 +44,15 @@
             text-align: center;
             font-weight: 800;
         }
-        input{
+
+        input {
             padding: 10px;
             margin: 5px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        button{
+
+        button {
             padding: 10px;
             margin: 5px 0;
             border: none;
@@ -56,10 +61,12 @@
             color: #fff;
             cursor: pointer;
         }
-        button:hover{
+
+        button:hover {
             background-color: #0c6d6d;
         }
-        p{
+
+        p {
             text-align: center;
             color: #007bff;
             cursor: pointer;
@@ -67,20 +74,21 @@
             font-weight: bold;
         }
 
-       
-       
 
-        .remember-forget{
+
+
+        .remember-forget {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
     </style>
 </head>
+
 <body>
     <div class="banner">
         <div class="form-container">
-            <img src="https://images.unsplash.com/photo-1557683316-973673baf926" alt="">
+            <img src="../images/lucas.jpg" alt="">
             <h2>Account Login</h2>
             <form>
                 <!-- <label for="user_name">Name:</label> -->
@@ -91,7 +99,7 @@
                 <div class="remember-forget">
                     <div>
                         <input type="checkbox" name="remember_me">
-                    <label for="remember_me">remember me</label>
+                        <label for="remember_me">remember me</label>
                     </div>
                     <p>Forget Password</p>
                 </div>
@@ -99,4 +107,5 @@
         </div>
     </div>
 </body>
+
 </html>
