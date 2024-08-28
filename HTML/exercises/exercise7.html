@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .cls1 p {
+            border: 4px dotted black;
+            border-left: 4px solid red;
+            border-right: 4px solid red;
+            width: 400px;
+            font-size: larger;
+        }
+
+        .cls2 p {
+            border: 2px solid black;
+            width: 300px;
+            height: 200px;
+            border-radius: 20px;
+            padding: 15px;
+        }
+
+        #p3 {
+            background-color: #fbca01;
+            border: none;
+        }
+
+        .cls3 {
+            border: 1px solid gray;
+            max-width: 800px
+        }
+
+        .cls3 h2 {
+            color: #5faf4f;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .cls3 p {
+            text-indent: 50px;
+        }
+        .cls3 p a {
+            color: #6EBEE2;
+            text-decoration: none;
+        }
+
+        .cls4 {
+            background-image: url(./images/background.png);
+            height: 350px;
+            max-width: 800px;
+            background-repeat: no-repeat;
+            padding-top: 200px;
+            
+        }
+
+        .cls41 {
+            display: flex;
+            justify-content: space-between;
+            align-items: top;
+        }
+
+        #box {
+            background-color: #fbca01;
+            height: 60px;
+            width: 60px;
+            margin-top: 5px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="cls1">
+        <h1>The border-style Property</h1>
+        <p>A border</p>
+    </div>
+
+    <br><br>
+
+    <div class="cls2">
+        <p>Rounded corners!</p>
+        <p id="p3">Rounded corners!</p>
+    </div>
+
+    <br><br>
+
+    <div class="cls3">
+        <h2>Text formating</h2>
+        <p>This text is styled <a href="#">"Try it"</a> link.</p>
+    </div>
+
+    <br><br>
+
+    <div class="cls4">
+        <div class="cls41">
+            <h2>Hello World</h2>
+            <div id="box"></div>
+        </div>
+        <p>This page has an immage as the background!</p>
+    </div>
+</body>
+</html>

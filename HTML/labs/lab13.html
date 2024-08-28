@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+		html {
+			background-color: lightgray;
+			font-family: trebuchet, geneva, sans-serif;
+		}
+		body {
+			width: 95vw;
+			height: 95vh;
+			display: flex;
+			flex-direction: column;
+			margin: auto;
+		}
+
+		article, aside,	footer,	header {
+			padding: 0.5rem;
+		}
+
+		header {
+			background-color: gray;
+			color: lightgray;
+			text-align: center;
+			border-bottom: 1px solid red;
+		}
+
+		nav {
+			display: flex;
+			background-color: black;
+			padding: 10px 0;
+			/* flex-grow: 1; */
+		}
+
+		nav a {
+			flex: auto;
+			text-align: center;
+			background-color: #ccc;
+			color: black;
+			margin: 0 5px;
+			padding: 5px 0;
+			text-decoration: none;
+		}
+
+		nav a:hover {
+			outline: 1px solid red;
+			color: red;
+			text-decoration: underline;
+		}
+		main {
+			display: flex;
+			border-bottom: 0.5rem solid;
+		}
+
+		aside {
+			background-color: white;
+		}
+		article {
+			flex: 75%;
+		}
+		aside {
+			flex: 25%;
+		}
+		img {
+			float: left;
+			margin: 5px;
+			width: 400px;
+		}
+		footer {
+			margin-top: auto;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Document Heading</h1>
+	</header>
+
+	<nav>
+		<a href="#">Home</a>
+		<a href="#">About</a>
+		<a href="#">Blog</a>
+		<a href="#">Careers</a>
+		<a href="#">Contact Us</a>
+	</nav>
+
+	<main>
+		<article>
+			<h2>This is the heading of the main section</h2>
+			<img src="../images/mountain.jpg" alt="">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quis magni numquam inventore, adipisci quae aut in sunt sint accusantium cupiditate corporis cum blanditiis. Dolore quaerat natus aspernatur perferendis quis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quis magni numquam inventore, adipisci quae aut in sunt sint accusantium cupiditate corporis cum blanditiis. Dolore quaerat natus aspernatur perferendis quis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quis magni numquam inventore, adipisci quae aut in sunt sint accusantium cupiditate corporis cum blanditiis. Dolore quaerat natus aspernatur perferendis quis.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus quis magni numquam inventore, adipisci quae aut in sunt sint accusantium cupiditate corporis cum blanditiis. Dolore quaerat natus aspernatur perferendis quis.</p>
+		</article>
+		
+		<aside>
+			this is aside
+		</aside>
+
+	</main>
+
+	<footer>
+		<p>Copyright &copy;2024 <a href="#">My Site</a></p>
+	</footer>
+</body>
+</html>
