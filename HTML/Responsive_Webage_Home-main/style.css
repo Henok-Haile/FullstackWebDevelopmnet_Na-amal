@@ -6,7 +6,7 @@
     outline: none;
 }
 
-@media only screen and (max-width: 	1024px) {
+@media only screen and (max-width: 	1000px) {
     header {
         display: flex;
         flex-direction: column;
@@ -21,19 +21,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 2rem;
+    margin: 0 2rem;
     /* background-color: red; */
 }
 
 img {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
 }
 
 nav ul {
     display: flex;
     gap: 30px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     list-style: none;
 }
 
@@ -53,22 +53,22 @@ a:hover {
 }
 
 .content h1 {
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 600;
     color: lightgreen;
 }
 
 button {
 	min-width: 250px;
-	padding: 20px;
+	padding: 10px;
 	margin: 20px 5px;
-	border-radius: 15px;
+	border-radius: 10px;
 	border: none;
 	color: white;
     background-color: blue;
 	font-size: 1.5rem;
 	cursor: pointer;
-	font-weight: 700;
+	font-weight: 600;
 }
 
 button:hover {
