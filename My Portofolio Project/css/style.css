@@ -139,7 +139,9 @@ header {
     border-color: #e0f780;
     box-shadow: none;
 }
-
+#contact .form-control::placeholder {
+    color: #b6cbce;
+}
 
 #contact input.form-control {
     height: 44px;
