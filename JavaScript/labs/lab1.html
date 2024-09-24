@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function imgChanger(){
+            document.getElementById('img1').src='./images/mountain.jpg'
+        }
+
+        function sumNumbers(){
+            var result = document.getElementById("result");
+            var num1 = document.getElementById("num1").value;
+            var num2 = document.getElementById("num2").value;
+            result.innerHTML = Number(num1) + Number(num2);
+        }
+    </script>
+    
+</head>
+<body>
+    <p id="demo"></p>
+
+    <img id="img1" src="./images/lucas.jpg" width="200px" alt="">
+    <div>
+        <button onclick="imgChanger()">Change Image</button>
+    </div>
+
+    <br><br>
+
+    <form>
+        <input type="text" id="num1">
+        <input type="text" id="num2">
+        <button type="button" onclick="sumNumbers()">click me!</button>
+        <p id="result"></p>
+    </form>
+
+
+    <script>
+        document.getElementById('demo').innerHTML='Welcome to JavaScript';
+        document.getElementById('demo').style.color='red';
+        document.getElementById('demo').style.fontSize='30px';
+    </script>
+</body>
+</html>
