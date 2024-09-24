@@ -6,3 +6,6 @@ function addJavaScriptString(inputString) {
 const orginalString = "is awesome!";
 const newString = addJavaScriptString(orginalString);
 console.log(newString);
+
+main
+mine
