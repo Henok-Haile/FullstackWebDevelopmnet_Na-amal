@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function convert(temp) {
+            document.getElementById('result').innerHTML = ((5 / 9) * (temp - 32)).toFixed(0);
+        }
+
+        function rep(){
+            document.getElementById('i2').value=document.getElementById('i1').value;
+        }
+    </script>
+</head>
+<body>
+    
+    <input type="text" id="ft">
+    <button onclick="convert(document.getElementById('ft').value)">convert</button>
+    <p id="result"></p>
+
+    <br><br>
+
+    <input type="text" id="i1" onkeyup="rep()">
+    <input type="text" id="i2">
+
+</body>
+</html>
