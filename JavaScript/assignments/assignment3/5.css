@@ -64,9 +64,9 @@ button:active {
 #result {
     margin-top: 20px;
     font-size: 1.5rem;
-    /* color: #27ae60; */
     color: #343a40;
 }
+
 
 
 @media (max-width: 600px) {
