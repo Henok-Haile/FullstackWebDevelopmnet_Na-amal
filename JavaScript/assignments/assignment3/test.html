@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Add and Display</title>
+</head>
+<body>
+
+    <input type="text" id="inputElement" placeholder="Enter a number">
+    <button onclick="addItem()">Add</button>
+    <button onclick="displayItems()">Display</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Initialize an empty array
+        let itemsArray = [];
+
+        // Function to add item to the array
+        function addItem() {
+            let inputValue = document.getElementById('inputElement').value;
+            if (inputValue) {
+                itemsArray.push(inputValue); // Add the input value to the array
+                document.getElementById('inputElement').value = ''; // Clear the input field
+            }
+        }
+
+        // Function to display items from the array
+        function displayItems() {
+            let resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear any previous output
+
+            // Loop through the array and display each element
+            for (let i = 0; i < itemsArray.length; i++) {
+                resultDiv.innerHTML += `Element ${i + 1} = ${itemsArray[i]}<br>`;
+            }
+        }
+    </script>
+
+</body>
+</html>
