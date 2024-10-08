@@ -31,10 +31,10 @@ function computeNumber() {
     else {
         // if the number are equal. return triple thier sum else return thier sum
         if (num1 === num2) {
-            result = `The number are equal. Tripling thier sum is ${3 * (num1 + num2)}`;
+            result = `The number are equal. Tripling thier sum is ${3 * (Number(num1) + Number(num2))}`;
         }
         else {
-            result = `The sum of the two numbers is ${num1 + num2}`;
+            result = `The sum of the two numbers is ${Number(num1) + Number(num2)}`;
         }
     }
 
