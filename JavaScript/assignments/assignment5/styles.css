@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8080D7;
+
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    height: 100vh;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    background-color: #AAD9D9;
+    height: 300px;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+p {
+    margin-top: 15px;
+}
