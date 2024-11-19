@@ -1,0 +1,32 @@
+/* Container for the list */
+.item-list {
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  /* Empty message */
+  .empty-message {
+    text-align: center;
+    color: #6c757d;
+    font-size: 18px;
+    margin: 20px 0;
+  }
+  
+  /* List items */
+  .item-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .item-list li:hover {
+    background-color: #f8f8f8;
+  }
+  
