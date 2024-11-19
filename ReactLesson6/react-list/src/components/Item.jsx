@@ -6,7 +6,7 @@ const Item = ({ item, onRemove}) => {
         <li className="item">
             {item}
             <button onClick={onRemove} style={{ marginLeft: '10px' }}>
-                Delete
+                Remove Item
             </button>
         </li>
     );
