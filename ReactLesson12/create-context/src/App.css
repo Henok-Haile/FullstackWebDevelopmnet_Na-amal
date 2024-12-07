@@ -1,0 +1,29 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f6d365, #fda085);
+  border: 2px solid #f3a683;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: left;
+}
+
+.app-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3b3b98;
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}

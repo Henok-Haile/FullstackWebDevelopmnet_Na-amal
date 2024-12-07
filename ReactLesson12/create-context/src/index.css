@@ -1,0 +1,29 @@
+.child-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 1rem;
+  background: linear-gradient(to bottom right, #d3cce3, #e9e4f0);
+  border: 2px solid #786fa6;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.child-title {
+  align-self: flex-start;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 1rem;
+  color: #574b90;
+}
+
+.child-message {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #30336b;
+  margin-top: 1rem;
+}
