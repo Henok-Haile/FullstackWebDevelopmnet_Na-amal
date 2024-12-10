@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-light border-top w-100 h-100">
       <div className="container d-flex justify-content-between py-4">
-        <div className="col-md-4">
+        <div>
           <h5>Features</h5>
           <ul className="list-unstyled">
             <li>
@@ -25,7 +25,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-md-4">
+        <div>
           <h5>Resources</h5>
           <ul className="list-unstyled">
             <li>
@@ -41,7 +41,7 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-md-4">
+        <div>
           <h5>About</h5>
           <ul className="list-unstyled">
             <li>
