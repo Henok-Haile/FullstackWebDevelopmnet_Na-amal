@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-light border-top w-100 h-100">
-      <div className="container d-flex justify-content-between py-4">
+      <div className="container d-flex justify-content-around py-4">
         <div>
           <h5>Features</h5>
           <ul className="list-unstyled">
