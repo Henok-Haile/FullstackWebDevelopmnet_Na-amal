@@ -1,0 +1,112 @@
+/* Full-screen layout */
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('./assets/wallpapersden.com_k-sea-of-clouds-at-sunset_4279x2840.jpg'); /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Push children to the top */
+  align-items: center;
+}
+
+/* Styling the input */
+.location-input {
+  margin-top: 20px;
+  width: 25%;
+  min-width: 25%;
+}
+
+.location-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+/* Weather container styling (no background, border, or opacity) */
+.weather-container {
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Align weather-info center */
+  align-items: center;
+  margin: 50px 0;
+}
+
+/* Weather info section */
+.weather-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* Align weather-main and weather-description horizontally */
+  align-items: center;
+}
+
+/* Weather main (name and temperature) */
+.weather-main {
+  flex: 1;
+  text-align: left;
+  color: white;
+}
+
+.weather-main h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.weather-main h2 {
+  font-size: 3rem;
+  margin: 10px 0 0;
+}
+
+/* Weather description (right side, vertical text) */
+.weather-description {
+  flex: 1;
+  writing-mode: vertical-lr; /* Makes text flow bottom-to-top */
+  transform: rotate(180deg);
+  text-orientation: upright;
+  text-align: right;
+  color: #ffcc00;
+  font-size: 0.5rem;
+}
+
+/* Weather details (moved outside weather-container and positioned at the bottom) */
+.weather-details {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  background: rgba(176, 176, 176, 0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 20px; /* Stick it at the bottom of the page */
+  left: 50%; /* Center align */
+  transform: translateX(-50%);
+}
+
+.detail-item {
+  text-align: center;
+  flex: 1;
+}
+
+.detail-item h5 {
+  margin: 0;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.detail-item p {
+  margin: 5px 0 0;
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bold;
+}
