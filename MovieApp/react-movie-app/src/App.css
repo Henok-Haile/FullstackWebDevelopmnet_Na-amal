@@ -5,7 +5,7 @@
   flex-direction: column;
   min-height: 100vh;
   margin: 0;
-  background-color: #121212; /* Dark background */
+  background-color: #22303c; /* Soft Navy Background */
   color: #fff;
   font-family: Arial, sans-serif;
 }
@@ -55,10 +55,10 @@ h1 {
 
 /* Movie Card */
 .card {
-  background-color: #1e1e1e;
-  color: #fff;
+  background-color: #f5f5f5; /* Off-White Background */
+  color: #2c3e50; /* Dark Teal Text */
   border: none;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle Shadow */
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
 }
@@ -69,7 +69,7 @@ h1 {
 
 .card img {
   width: 100%;
-  height: 350px;
+  height: 300px; /* Reduced height for elegance */
   object-fit: cover;
   border-radius: 10px 10px 0 0;
 }
@@ -80,10 +80,24 @@ h1 {
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
+  color: #22303c; /* Soft Navy for Titles */
 }
 
 .card-text {
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: #2c3e50; /* Dark Teal */
+}
+
+.btn-primary {
+  background-color: #ff9800; /* Orange Accent */
+  border-color: #ff9800;
+  color: #fff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #e68900; /* Darker Orange */
+  border-color: #e68900;
 }
