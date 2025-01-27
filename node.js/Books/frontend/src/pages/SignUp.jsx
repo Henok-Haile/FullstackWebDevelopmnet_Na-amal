@@ -14,7 +14,7 @@ const SignUp = () => {
     const handleSignUp = () => {
 
         axios
-        .post('https://new-one-yoka.onrender.com/user/signup', { username, email, password })
+        .post('https://backend-book-blond.vercel.app/user/signup', { username, email, password })
         .then(() => {
             enqueueSnackbar('Sign Up successful', { variant: 'success' });
             navigate('/');

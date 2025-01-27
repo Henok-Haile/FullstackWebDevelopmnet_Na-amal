@@ -24,7 +24,7 @@ const Home = () => {
     
     useEffect(() => {
         axios
-        .get('https://new-one-yoka.onrender.com/books')
+        .get('https://backend-book-blond.vercel.app/books')
         .then((response) => {
             setBooks(response.data.data);
         })

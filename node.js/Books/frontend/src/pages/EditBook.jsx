@@ -14,7 +14,7 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(`https://new-one-yoka.onrender.com/books/${id}`)
+      .get(`https://backend-book-blond.vercel.app/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -34,7 +34,7 @@ const EditBook = () => {
     };
 
     axios
-    .put(`https://new-one-yoka.onrender.com/books/${id}`, data)
+    .put(`https://backend-book-blond.vercel.app/books/${id}`, data)
     .then(() => {
         enqueueSnackbar("Book edited successfully")
       navigate("/home");

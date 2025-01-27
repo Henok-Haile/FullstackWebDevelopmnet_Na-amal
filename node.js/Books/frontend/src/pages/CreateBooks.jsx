@@ -21,7 +21,7 @@ const CreateBooks = () => {
     };
 
     axios
-      .post("https://new-one-yoka.onrender.com/books", data, {
+      .post("https://backend-book-blond.vercel.app/books", data, {
         headers: {
             'Content-Type': 'multipart/form-data',
         },

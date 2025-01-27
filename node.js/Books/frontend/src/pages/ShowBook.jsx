@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         axios
-        .get(`https://new-one-yoka.onrender.com/books/${id}`)
+        .get(`https://backend-book-blond.vercel.app/books/${id}`)
         .then((response) => {
             setBook(response.data);
         })
