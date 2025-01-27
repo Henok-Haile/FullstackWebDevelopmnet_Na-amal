@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         axios
-        .get(`http://localhost:5555/books/${id}`)
+        .get(`https://new-one-yoka.onrender.com/books/${id}`)
         .then((response) => {
             setBook(response.data);
         })

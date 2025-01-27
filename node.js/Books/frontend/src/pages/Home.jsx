@@ -24,7 +24,7 @@ const Home = () => {
     
     useEffect(() => {
         axios
-        .get('http://localhost:5555/books')
+        .get('https://new-one-yoka.onrender.com/books')
         .then((response) => {
             setBooks(response.data.data);
         })

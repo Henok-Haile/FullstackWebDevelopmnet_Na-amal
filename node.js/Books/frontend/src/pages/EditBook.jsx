@@ -14,7 +14,7 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5555/books/${id}`)
+      .get(`https://new-one-yoka.onrender.com/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -34,7 +34,7 @@ const EditBook = () => {
     };
 
     axios
-    .put(`http://localhost:5555/books/${id}`, data)
+    .put(`https://new-one-yoka.onrender.com/books/${id}`, data)
     .then(() => {
         enqueueSnackbar("Book edited successfully")
       navigate("/home");
