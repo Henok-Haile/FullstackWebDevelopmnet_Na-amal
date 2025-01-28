@@ -14,7 +14,7 @@ const SignUp = () => {
     const handleSignUp = () => {
 
         axios
-        .post('https://backend-book-blond.vercel.app/user/signup', { username, email, password })
+        .post('https://fullstack-web-developmnet-na-amal-gxc9.vercel.app/user/signup', { username, email, password })
         .then(() => {
             enqueueSnackbar('Sign Up successful', { variant: 'success' });
             navigate('/');
