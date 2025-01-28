@@ -12,7 +12,7 @@ const DeleteBook = () => {
 
   const handleDeleteBook = () => {
     axios
-      .delete(`https://backend-book-1-6krk.onrender.com/books/${id}`)
+      .delete(`https://new-one-yoka.onrender.com/books/${id}`)
       .then(() => {
         enqueueSnackbar("Book deleted successfully")
         navigate("/home");

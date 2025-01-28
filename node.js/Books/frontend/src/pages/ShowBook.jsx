@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         axios
-        .get(`https://backend-book-1-6krk.onrender.com/books/${id}`)
+        .get(`https://new-one-yoka.onrender.com/books/${id}`)
         .then((response) => {
             setBook(response.data);
         })

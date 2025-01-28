@@ -24,7 +24,7 @@ const Home = () => {
     
     useEffect(() => {
         axios
-        .get('https://backend-book-1-6krk.onrender.com/books')
+        .get('https://new-one-yoka.onrender.com/books')
         .then((response) => {
             setBooks(response.data.data);
         })
