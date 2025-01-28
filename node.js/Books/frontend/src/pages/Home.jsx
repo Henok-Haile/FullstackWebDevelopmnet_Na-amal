@@ -24,7 +24,7 @@ const Home = () => {
     
     useEffect(() => {
         axios
-        .get('https://fullstack-web-developmnet-na-amal-5nwh.vercel.app/books')
+        .get('https://backend-book-1-6krk.onrender.com/books')
         .then((response) => {
             setBooks(response.data.data);
         })

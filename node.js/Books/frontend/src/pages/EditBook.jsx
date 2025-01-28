@@ -14,7 +14,7 @@ const EditBook = () => {
 
   useEffect(() => {
     axios
-      .get(`https://fullstack-web-developmnet-na-amal-gxc9.vercel.app/books/${id}`)
+      .get(`https://backend-book-1-6krk.onrender.com/books/${id}`)
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -34,7 +34,7 @@ const EditBook = () => {
     };
 
     axios
-    .put(`https://fullstack-web-developmnet-na-amal-5nwh.vercel.app/books/${id}`, data)
+    .put(`https://backend-book-1-6krk.onrender.com/books/${id}`, data)
     .then(() => {
         enqueueSnackbar("Book edited successfully")
       navigate("/home");
