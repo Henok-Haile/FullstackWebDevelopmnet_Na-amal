@@ -34,7 +34,7 @@ const EditBook = () => {
     };
 
     axios
-    .put(`https://fullstack-web-developmnet-na-amal-gxc9.vercel.app/books/${id}`, data)
+    .put(`https://fullstack-web-developmnet-na-amal-5nwh.vercel.app/books/${id}`, data)
     .then(() => {
         enqueueSnackbar("Book edited successfully")
       navigate("/home");

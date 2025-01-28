@@ -24,7 +24,7 @@ const Home = () => {
     
     useEffect(() => {
         axios
-        .get('https://fullstack-web-developmnet-na-amal-gxc9.vercel.app/books')
+        .get('https://fullstack-web-developmnet-na-amal-5nwh.vercel.app/books')
         .then((response) => {
             setBooks(response.data.data);
         })

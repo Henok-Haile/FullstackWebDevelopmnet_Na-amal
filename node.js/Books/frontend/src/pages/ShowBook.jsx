@@ -11,7 +11,7 @@ const ShowBook = () => {
 
     useEffect(() => {
         axios
-        .get(`https://fullstack-web-developmnet-na-amal-gxc9.vercel.app/books/${id}`)
+        .get(`https://fullstack-web-developmnet-na-amal-5nwh.vercel.app/books/${id}`)
         .then((response) => {
             setBook(response.data);
         })
