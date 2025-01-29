@@ -18,6 +18,11 @@ const bookSchema = mongoose.Schema(
             type: String,
             required: false,
         },
+        userId: {
+            type: mongoose.Schema.Types.ObjectId, // Reference to the User model
+            ref: "User", // Must match the name of the model in userModel.js
+            required: true,
+        },
     },
     {
         timestamps: true,
