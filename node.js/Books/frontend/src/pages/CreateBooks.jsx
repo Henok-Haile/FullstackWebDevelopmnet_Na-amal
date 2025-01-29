@@ -19,11 +19,12 @@ const CreateBooks = () => {
       publishYear,
       image,
     };
-
+const token=localStorage.getItem("token")
     axios
       .post("https://new-one-yoka.onrender.com/books", data, {
         headers: {
             'Content-Type': 'multipart/form-data',
+            "Authorization":"Bearer "+ token
         },
       })
       .then(() => {
