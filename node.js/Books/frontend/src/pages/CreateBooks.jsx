@@ -12,29 +12,60 @@ const CreateBooks = () => {
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
 
-  const handleSaveBook = () => {
+  // Cloudinary Upload Function
+  const uploadImageToCloudinary = async (file) => {
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "henokk"); // Replace with your Cloudinary upload preset
+    formData.append("cloud_name", "dpnmbolhm"); // Replace with your Cloudinary cloud name
+
+    try {
+      const response = await axios.post(
+        `https://api.cloudinary.com/v1_1/dpnmbolhm/image/upload`,
+        formData
+      );
+      console.log(response.data.secure_url);
+      return response.data.secure_url; // Return uploaded image URL
+    } catch (error) {
+      console.error("Cloudinary upload error:", error);
+      enqueueSnackbar("Image upload failed", { variant: "error" });
+      return null;
+    }
+  };
+
+  const handleSaveBook = async () => {
+    if (!image) {
+      enqueueSnackbar("Please select an image", { variant: "warning" });
+      return;
+    }
+
+    enqueueSnackbar("Uploading image...", { variant: "info" });
+    const imageUrl = await uploadImageToCloudinary(image);
+
+    if (!imageUrl) return;
+
     const data = {
       title,
       author,
       publishYear,
-      image,
+      image: imageUrl, // Use the Cloudinary image URL
     };
-    
+
     const token = localStorage.getItem("token");
     axios
       .post("https://new-one-yoka.onrender.com/books", data, {
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${token}`,
         },
       })
       .then(() => {
-        enqueueSnackbar("book created successfully");
+        enqueueSnackbar("Book created successfully", { variant: "success" });
         navigate("/home");
       })
       .catch((error) => {
-        // alert('An error happened. Please Check console');
-        console.log(error);
+        console.error("Error saving book:", error);
+        enqueueSnackbar("Failed to create book", { variant: "error" });
       });
   };
 
@@ -65,7 +96,7 @@ const CreateBooks = () => {
         </div>
 
         <div className="my-4">
-          <label className="mx-2">PublishYear</label>
+          <label className="mx-2">Publish Year</label>
           <input
             type="number"
             value={publishYear}
@@ -75,11 +106,11 @@ const CreateBooks = () => {
         </div>
 
         <div className="my-4">
-          <label className="text-xl mr-4 text-gray-5000">Image</label>
+          <label className="text-xl mr-4 text-gray-500">Image</label>
           <input
             type="file"
             onChange={(e) => setImage(e.target.files[0])}
-            className="norder-2 border-gray-500 px-4 py-2 w-full"
+            className="border-2 border-gray-500 px-4 py-2 w-full"
           />
         </div>
 
