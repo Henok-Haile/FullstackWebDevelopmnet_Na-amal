@@ -10,8 +10,17 @@ const ShowBook = () => {
     const { id } = useParams();
 
     useEffect(() => {
+
+        const token = localStorage.getItem("token");
+
         axios
-        .get(`https://new-one-yoka.onrender.com/books/${id}`)
+        .get(`https://new-one-yoka.onrender.com/books/${id}`, {
+            headers: {
+              "Content-Type": "multipart/form-data",
+              Authorization: `Bearer ${token}`,
+            },
+          }
+        )
         .then((response) => {
             setBook(response.data);
         })

@@ -11,8 +11,15 @@ const DeleteBook = () => {
   const { enqueueSnackbar } = useSnackbar();
 
   const handleDeleteBook = () => {
+    const token = localStorage.getItem("token");
+
     axios
-      .delete(`https://new-one-yoka.onrender.com/books/${id}`)
+      .delete(`https://new-one-yoka.onrender.com/books/${id}`, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then(() => {
         enqueueSnackbar("Book deleted successfully")
         navigate("/home");

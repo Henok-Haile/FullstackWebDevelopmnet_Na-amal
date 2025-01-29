@@ -13,8 +13,15 @@ const EditBook = () => {
   const { enqueueSnackbar } = useSnackbar();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
     axios
-      .get(`https://new-one-yoka.onrender.com/books/${id}`)
+      .get(`https://new-one-yoka.onrender.com/books/${id}`, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
+      })
       .then((response) => {
         setAuthor(response.data.author);
         setPublishYear(response.data.publishYear);
@@ -32,9 +39,15 @@ const EditBook = () => {
       author,
       publishYear,
     };
+    const token = localStorage.getItem("token");
 
     axios
-    .put(`https://new-one-yoka.onrender.com/books/${id}`, data)
+    .put(`https://new-one-yoka.onrender.com/books/${id}`, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+        Authorization: `Bearer ${token}`,
+      },
+    })
     .then(() => {
         enqueueSnackbar("Book edited successfully")
       navigate("/home");

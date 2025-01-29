@@ -6,32 +6,37 @@ import { MdOutlineAddBox } from "react-icons/md";
 import BooksTable from "../components/home/BooksTable";
 
 const Home = () => {
+  const [books, setBooks] = useState([]);
 
-    const [books, setBooks] = useState([]);
+  const navigate = useNavigate();
+  const usernameLocal = localStorage.getItem("user");
+  console.log(usernameLocal);
+  if (usernameLocal == null) {
+    navigate("/");
+  }
 
-    const navigate = useNavigate();
-    const usernameLocal = localStorage.getItem('user');
-    console.log(usernameLocal);
-    if (usernameLocal == null) {
-      navigate('/');
-    }
+  const handleLogOut = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+    navigate("/");
+  };
 
-    const handleLogOut = () => {
-      localStorage.removeItem('token');
-      localStorage.removeItem('user');
-      navigate('/');
-    };
-    
-    useEffect(() => {
-        axios
-        .get('https://new-one-yoka.onrender.com/books')
-        .then((response) => {
-            setBooks(response.data.data);
-        })
-        .catch((error) => {
-            console.log(error);
-        });
-    }, []);
+  const token = localStorage.getItem("token");
+  useEffect(() => {
+    axios
+      .get("https://new-one-yoka.onrender.com/books", {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((response) => {
+        setBooks(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
   return (
     <div className="container p-4">
       <div className="flex justify-between items-center">
@@ -40,11 +45,12 @@ const Home = () => {
           <MdOutlineAddBox className="display-5" />
         </Link>
         <span className="mx-2">Welcome, {usernameLocal}!</span>
-        <button className="btn btn-primary my-3" onClick={handleLogOut}>Log Out</button>
+        <button className="btn btn-primary my-3" onClick={handleLogOut}>
+          Log Out
+        </button>
       </div>
 
-        <BooksTable books={books} />
-
+      <BooksTable books={books} />
     </div>
   );
 };
