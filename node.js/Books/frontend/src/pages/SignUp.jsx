@@ -11,7 +11,12 @@ const SignUp = () => {
     const navigate = useNavigate();
     const { enqueueSnackbar } = useSnackbar();
 
+
     const handleSignUp = () => {
+        if (!username || !email || !password) {
+            enqueueSnackbar('Please fill in all fields', { variant: 'warning' });
+            return;
+        }
 
         axios
         .post('https://new-one-yoka.onrender.com/user/signup', { username, email, password })
@@ -20,7 +25,8 @@ const SignUp = () => {
             navigate('/');
         })
         .catch(error => {
-            enqueueSnackbar('Sign Up failed', { variant: 'error' });
+            const errorMessage = error.response?.data?.message || 'Sign Up failed';
+            enqueueSnackbar(errorMessage, { variant: 'error' });
             console.log(error);
         });
     };
