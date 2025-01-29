@@ -50,7 +50,7 @@ const Login = () => {
           <label className="mx-3 mr-4">Username</label>
           <input
             type="text"
-            value={username}
+            value={identifier}
             onChange={(e) => setIdentifier(e.target.value)}
             className="px-4 py-2"
           />
