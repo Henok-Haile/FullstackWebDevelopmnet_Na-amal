@@ -6,6 +6,8 @@ import EditBook from "./pages/EditBook.jsx";
 import DeleteBook from "./pages/DeleteBook.jsx";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
+import VerifyEmail from "./pages/VerfiyEmail.jsx";
+
 
 function App() {
   return (
@@ -15,6 +17,7 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/VerfiyEmail" element={<VerifyEmail />} />
         <Route path="/books/create" element={<CreateBook />} />
         <Route path="/books/details/:id" element={<ShowBook />} />
         <Route path="/books/edit/:id" element={<EditBook />} />
