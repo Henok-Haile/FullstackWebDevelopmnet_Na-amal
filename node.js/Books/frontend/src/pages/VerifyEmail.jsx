@@ -1,22 +1,30 @@
 import axios from 'axios';
 import { useSnackbar } from 'notistack';
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const VerifyEmail = () => {
-    const { token } = useParams(); // Retrieve the token from the URL
+    const [searchParams] = useSearchParams();
+    const token = searchParams.get("token"); // get the token from query params
     const { enqueueSnackbar } = useSnackbar();
     const navigate = useNavigate();
     const [isVerifying, setIsVerifying] = useState(true); // State to track verification status
     const [errorMessage, setErrorMessage] = useState('');
 
     useEffect(() => {
+
+        if (!token) {
+            setErrorMessage('No verification token provided.');
+            setIsVerifying(false);
+            return;
+        }
+
         // Send a request to verify the token
-        axios.get(`https://new-one-yoka.onrender.com/user/verify-email/${token}`)
+        axios.get(`https://new-one-yoka.onrender.com/user/verify-email/?token=${token}`)
             .then(() => {
                 enqueueSnackbar('Email successfully verified! You can now log in.', { variant: 'success' });
                 setIsVerifying(false);
-                navigate('/'); // Redirect to login pag
+                navigate('/'); // Redirect to login page
             })
             .catch((error) => {
                 setIsVerifying(false);

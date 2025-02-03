@@ -6,7 +6,7 @@ import EditBook from "./pages/EditBook.jsx";
 import DeleteBook from "./pages/DeleteBook.jsx";
 import Login from "./pages/Login.jsx";
 import SignUp from "./pages/SignUp.jsx";
-import VerifyEmail from "./pages/VerfiyEmail.jsx";
+import VerifyEmail from "./pages/VerifyEmail.jsx";
 
 function App() {
   return (
